@@ -38,12 +38,12 @@ public class SendRoutingInfoForLCSResponseWrapper extends LsmMessageWrapper<Send
 	private static final String EVENT_TYPE_NAME = "ss7.map.service.lsm.SEND_ROUTING_INFO_FOR_LCS_RESPONSE";
 
 	/**
-	 * @param mapDialogWrapper
+	 * @param mapDialogLsmWrapper
 	 * @param sendRoutingInfoForLCSResponse
 	 */
-	public SendRoutingInfoForLCSResponseWrapper(MAPDialogLsmWrapper mAPDialog,
+	public SendRoutingInfoForLCSResponseWrapper(MAPDialogLsmWrapper mapDialogLsmWrapper,
 			SendRoutingInfoForLCSResponse sendRoutingInfoForLCSResponse) {
-		super(mAPDialog, EVENT_TYPE_NAME, sendRoutingInfoForLCSResponse);
+		super(mapDialogLsmWrapper, EVENT_TYPE_NAME, sendRoutingInfoForLCSResponse);
 	}
 
 	public GSNAddress getAdditionalVGmlcAddress() {

@@ -56,12 +56,12 @@ public class SubscriberLocationReportRequestWrapper extends LsmMessageWrapper<Su
 	private static final String EVENT_TYPE_NAME = "ss7.map.service.lsm.SUBSCRIBER_LOCATION_REPORT_REQUEST";
 
 	/**
-	 * @param mapDialogWrapper
+	 * @param mapDialogLsmWrapper
 	 * @param subscriberLocationReportRequest
 	 */
-	public SubscriberLocationReportRequestWrapper(MAPDialogLsmWrapper mAPDialog,
+	public SubscriberLocationReportRequestWrapper(MAPDialogLsmWrapper mapDialogLsmWrapper,
 			SubscriberLocationReportRequest subscriberLocationReportRequest) {
-		super(mAPDialog, EVENT_TYPE_NAME, subscriberLocationReportRequest);
+		super(mapDialogLsmWrapper, EVENT_TYPE_NAME, subscriberLocationReportRequest);
 	}
 
 	public AccuracyFulfilmentIndicator getAccuracyFulfilmentIndicator() {
@@ -176,6 +176,14 @@ public class SubscriberLocationReportRequestWrapper extends LsmMessageWrapper<Su
 		return this.wrappedEvent.getTargetServingNodeForHandover();
 	}
 
+	public LMSI getLMSI() {
+		return this.wrappedEvent.getLMSI();
+	}
+
+	public ReportingPLMNList getReportingPLMNList() {
+		return this.wrappedEvent.getReportingPLMNList();
+	}
+
 	public UtranGANSSpositioningData getUtranGANSSpositioningData() {
 		return this.wrappedEvent.getUtranGANSSpositioningData();
 	}
@@ -192,16 +200,6 @@ public class SubscriberLocationReportRequestWrapper extends LsmMessageWrapper<Su
 	@Override
 	public String toString() {
 		return "SubscriberLocationReportRequestWrapper [wrapped=" + this.wrappedEvent + "]";
-	}
-
-	@Override
-	public LMSI getLMSI() {
-		return this.wrappedEvent.getLMSI();
-	}
-
-	@Override
-	public ReportingPLMNList getReportingPLMNList() {
-		return this.wrappedEvent.getReportingPLMNList();
 	}
 
 }

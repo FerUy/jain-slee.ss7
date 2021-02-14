@@ -37,12 +37,12 @@ public class SendRoutingInfoForLCSRequestWrapper extends LsmMessageWrapper<SendR
 	private static final String EVENT_TYPE_NAME = "ss7.map.service.lsm.SEND_ROUTING_INFO_FOR_LCS_REQUEST";
 
 	/**
-	 * @param mapDialogWrapper
+	 * @param mapDialogLsmWrapper
 	 * @param sendRoutingInfoForLCSRequest
 	 */
-	public SendRoutingInfoForLCSRequestWrapper(MAPDialogLsmWrapper mAPDialog,
+	public SendRoutingInfoForLCSRequestWrapper(MAPDialogLsmWrapper mapDialogLsmWrapper,
 			SendRoutingInfoForLCSRequest sendRoutingInfoForLCSRequest) {
-		super(mAPDialog, EVENT_TYPE_NAME, sendRoutingInfoForLCSRequest);
+		super(mapDialogLsmWrapper, EVENT_TYPE_NAME, sendRoutingInfoForLCSRequest);
 	}
 
 	public MAPExtensionContainer getExtensionContainer() {

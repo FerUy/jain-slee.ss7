@@ -45,12 +45,12 @@ public class ProvideSubscriberLocationResponseWrapper extends LsmMessageWrapper<
 	private static final String EVENT_TYPE_NAME = "ss7.map.service.lsm.PROVIDE_SUBSCRIBER_LOCATION_RESPONSE";
 
 	/**
-	 * @param mapDialogWrapper
+	 * @param mapDialogLsmWrapper
 	 * @param provideSubscriberLocationResponse
 	 */
-	public ProvideSubscriberLocationResponseWrapper(MAPDialogLsmWrapper mAPDialog,
+	public ProvideSubscriberLocationResponseWrapper(MAPDialogLsmWrapper mapDialogLsmWrapper,
 			ProvideSubscriberLocationResponse provideSubscriberLocationResponse) {
-		super(mAPDialog, EVENT_TYPE_NAME, provideSubscriberLocationResponse);
+		super(mapDialogLsmWrapper, EVENT_TYPE_NAME, provideSubscriberLocationResponse);
 	}
 
 	public AccuracyFulfilmentIndicator getAccuracyFulfilmentIndicator() {
